@@ -19,7 +19,7 @@ export function resizeHandler($root, event) {
       value = coords.width + delta
       $resizer.css({right: -delta + 'px'})
     } else {
-      const delta = e.pageY - coords.bottom
+      const delta = e.clientY - coords.bottom
       value = coords.height + delta
       $resizer.css({bottom: -delta + 'px'})
     }
@@ -28,6 +28,7 @@ export function resizeHandler($root, event) {
   document.onmouseup = () => {
     document.onmousemove = null
     document.onmouseup = null
+
 
     if (type === 'col') {
       $parent.css({width: value + 'px'})
@@ -39,8 +40,8 @@ export function resizeHandler($root, event) {
 
     $resizer.css({
       opacity: 0,
-      bottom: 0,
-      right: 0
+      bottom: null,
+      right: null
     })
   }
 }

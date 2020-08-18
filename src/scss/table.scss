@@ -68,11 +68,13 @@
     bottom: 0;
     right: 0;
     background: $primary-color;
-    opacity: 0;
-    z-index: 1000;
-
+    opacity: 0;   
+    z-index: 2;
+    
+    &:active, 
     &:hover {
-      opacity: 1!important;
+      opacity: 1;     
+      
     }
   }
 
@@ -80,8 +82,9 @@
     top: 0;
     width: 4px;
 
-    &:hover {
-      cursor: col-resize;
+   
+    &:hover {    
+    cursor: col-resize;
     }
   }
 

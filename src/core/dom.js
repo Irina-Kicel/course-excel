@@ -1,8 +1,8 @@
 class Dom {
   constructor(selector) {
-    this.$el = typeof selector === 'string' ? 
-    document.querySelector(selector) : 
-    selector
+    this.$el = typeof selector === 'string'
+      ? document.querySelector(selector)
+      : selector
   }
 
   html(html) {
@@ -65,6 +65,7 @@ class Dom {
   }
 }
 
+// event.target
 export function $(selector) {
   return new Dom(selector)
 }
@@ -76,3 +77,4 @@ $.create = (tagName, classes = '') => {
   }
   return $(el)
 }
+
