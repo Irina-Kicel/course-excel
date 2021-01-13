@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 .excel__table {
   position: absolute;
   left: 0;
@@ -68,13 +71,11 @@
     bottom: 0;
     right: 0;
     background: $primary-color;
-    opacity: 0;   
-    z-index: 2;
-    
-    &:active, 
+    opacity: 0;
+    z-index: 1000;
+
     &:hover {
-      opacity: 1;     
-      
+      opacity: 1!important;
     }
   }
 
@@ -82,9 +83,8 @@
     top: 0;
     width: 4px;
 
-   
-    &:hover {    
-    cursor: col-resize;
+    &:hover {
+      cursor: col-resize;
     }
   }
 
